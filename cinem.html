@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cinemexx</title>
+    <style>
+        body {
+            background-color: #BC96C5;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #C3ABC9;
+        }
+
+        /* LOGO */
+        .logo {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .logo img {
+            width: 180px;
+        }
+
+        /* TITULO */
+        h1 {
+            text-align: center;
+            background-color: #E2D1E6;
+            color: #6F4A79;
+            padding: 10px;
+            width: 45%;
+            margin: auto;
+            border-left: 5px solid #6F74AE;
+        }
+
+        /* CARTELERA */
+        .cartelera {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .pelicula {
+            background-color: white;
+            border: 2px solid #CFB3D5;
+            width: 220px;
+            padding: 10px;
+            box-shadow: 0 2px 5px #bbb;
+        }
+
+        .pelicula img {
+            width: 150px;
+            height: 190px;
+            object-fit: cover;
+            display: block;
+            margin: auto;
+        }
+
+        .pelicula h2 {
+            text-align: center;
+            font-size: 17px;
+            color: #8E5BA0;
+        }
+
+        .pelicula p {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .descripcion {
+            background-color: #f2f2f2;
+            color: #333;
+            padding: 8px;
+            font-size: 13px;
+        }
+
+        /* BOTON DE TRAILER */
+        .boton-trailer {
+            display: block;
+            width: 80%;
+            margin: 12px auto 5px;
+            padding: 10px;
+            background-color: #8E5BA0;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            border-radius: 5px;
+        }
+
+        .boton-trailer:hover {
+            background-color: #6F3D80;
+        }
+
+        /* TITULOS */
+        .titulo {
+            background-color: #A06AAD;
+            color: white;
+            text-align: center;
+            width: 50%;
+            margin: 30px auto 10px;
+            padding: 5px;
+            border-left: 5px solid #B45FBF;
+        }
+
+        /* TABLAS */
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: auto;
+            background-color: white;
+            color: #333;
+        }
+
+        th {
+            background-color: #B45FBF;
+            color: white;
+            padding: 9px;
+        }
+
+        td {
+            border: 1px solid #aaa;
+            padding: 8px;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #EAD9EF;
+        }
+
+        /* BOTONES */
+        .boton-comprar {
+            display: block;
+            width: 60%;
+            margin: 25px auto;
+            padding: 12px;
+            background-color: #6F4A79;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .boton-comprar:hover {
+            background-color: #8E5BA0;
+        }
+
+        /* SECCION DE COMPRAS */
+        #seccion-compras {
+            display: none;
+        }
+
+        select, input[type="number"] {
+            padding: 6px;
+            border: 1px solid #A06AAD;
+            border-radius: 4px;
+        }
+
+        .resumen-total {
+            text-align: center;
+            background-color: white;
+            color: #333;
+            width: 50%;
+            margin: 20px auto;
+            padding: 15px;
+            border: 2px solid #8E5BA0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LOGO DE CINEMEX -->
+    <div class="logo">
+        <img src="cine..png" alt="Logo Cinemex">
+    </div>
+
+    <!-- SECCION PRINCIPAL: CARTELERA Y HORARIOS -->
+    <div id="seccion-principal">
+        <h1>CARTELERA</h1>
+
+        <div class="cartelera">
+            <!-- PELÍCULA 1 -->
+            <div class="pelicula">
+                <img src="i.jpg" alt="A dos metros de ti">
+                <h2>A DOS METROS DE TI</h2>
+                <p><b>Género:</b> Drama / Romance</p>
+                <p><b>Duración:</b> 1h 57min</p>
+                <p><b>Clasificación:</b> B</p>
+                <p><b>Sala:</b> 1</p>
+                <div class="descripcion">Stella y Will son dos jóvenes que se conocen en el hospital y comienzan una relación especial.</div>
+                <a class="boton-trailer" href="https://youtu.be/9smnsh8MKQM" target="_blank">VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 2 -->
+            <div class="pelicula">
+                <img src="c.jpg" alt="Bajo la misma estrella">
+                <h2>BAJO LA MISMA ESTRELLA</h2>
+                <p><b>Género:</b> Romance / Drama</p>
+                <p><b>Duración:</b> 2h 6min</p>
+                <p><b>Clasificación:</b> B</p>
+                <p><b>Sala:</b> 2</p>
+                <div class="descripcion">Hazel y Augustus se conocen en un grupo de apoyo y comienzan una amistad especial.</div>
+                <a class="boton-trailer" href="https://youtu.be/KiFGEwueNFU" target="_blank">VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 3 -->
+            <div class="pelicula">
+                <img src="jurassic.jpg" alt="Jurassic World">
+                <h2>JURASSIC WORLD</h2>
+                <p><b>Género:</b> Aventura</p>
+                <p><b>Duración:</b> 2h 10min</p>
+                <p><b>Clasificación:</b> B</p>
+                <p><b>Sala:</b> 3</p>
+                <div class="descripcion">Un parque con dinosaurios se convierte en un lugar peligroso tras el escape de un híbrido.</div>
+                <a class="boton-trailer" href="https://youtu.be/9m9yRauMJIQ" target="_blank">VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 4 -->
+            <div class="pelicula">
+                <img src="m.png" alt="Mario Bros">
+                <h2>SUPER MARIO BROS</h2>
+                <p><b>Género:</b> Animación / Aventura</p>
+                <p><b>Duración:</b> 1h 35min</p>
+                <p><b>Clasificación:</b> AA</p>
+                <p><b>Sala:</b> 4</p>
+                <div class="descripcion">Mario y Luigi llegan a un mundo diferente donde superarán varios obstáculos.</div>
+                <a class="boton-trailer" href="https://youtu.be/DmCZoiCp5C0" target="_blank">VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 5 -->
+            <div class="pelicula">
+                <img src="md.jpg" alt="Amor a medianoche">
+                <h2>AMOR A MEDIANOCHE</h2>
+                <p><b>Género:</b> Romance / Drama</p>
+                <p><b>Duración:</b> 1h 31min</p>
+                <p><b>Clasificación:</b> B</p>
+                <p><b>Sala:</b> 5</p>
+                <div class="descripcion">Una joven que debe evitar la luz del sol conoce a un chico durante las noches.</div>
+                <a class="boton-trailer" href="https://youtu.be/U-CRqOW1j68" target="_blank">VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 6 -->
+            <div class="pelicula">
+                <img src="ava.jpg" alt="Avatar">
+                <h2>AVATAR</h2>
+                <p><b>Género:</b> Ciencia ficción</p>
+                <p><b>Duración:</b> 2h 42min</p>
+                <p><b>Clasificación:</b> B</p>
+                <p><b>Sala:</b> 6</p>
+                <div class="descripcion">Jake Sully llega al planeta Pandora, donde conoce a los Na’vi.</div>
+                <a class="boton-trailer"
+              href="https://youtu.be/bf38f_JINyw?si=pPH_BmJwFb16mvup">
+             VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 7 -->
+            <div class="pelicula">
+                <img src="t.jpg" alt="Titanic">
+                <h2>TITANIC</h2>
+                <p><b>Género:</b> Romance / Drama</p>
+                <p><b>Duración:</b> 3h 14min</p>
+                <p><b>Clasificación:</b> B</p>
+                <p><b>Sala:</b> 7</p>
+                <div class="descripcion">Rose y Jack se conocen durante el viaje del Titanic.</div>
+                <a class="boton-trailer"  
+               href="https://youtu.be/1EMkCJWQIDY?si=VJLUurw8IebBSc1i">
+               VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 8 -->
+            <div class="pelicula">
+                <img src="in.jpg" alt="Intensamente 2">
+                <h2>INTENSAMENTE 2</h2>
+                <p><b>Género:</b> Animación</p>
+                <p><b>Duración:</b> 1h 36min</p>
+                <p><b>Clasificación:</b> AA</p>
+                <p><b>Sala:</b> 8</p>
+                <div class="descripcion">Riley crece y conoce nuevas emociones en su mente.</div>
+                <a class="boton-trailer" 
+               href="https://youtu.be/-lUVuHLMgDQ?si=Jt6KQoWqp_mJEWl">
+              VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 9 -->
+            <div class="pelicula">
+                <img src="k.jpg" alt="Coco">
+                <h2>coco</h2>
+                <p><b>Género:</b> Animación</p>
+                <p><b>Duración:</b> 1h 45min</p>
+                <p><b>Clasificación:</b> A</p>
+                <p><b>Sala:</b> 9</p>
+                <div class="descripcion">Miguel viaja al mundo de los muertos para descubrir a su familia.</div>
+                <a class="boton-trailer"
+             href="https://youtu.be/h9Unr35ws-E?si=5SRcK7Mxq0n7QMsN">
+             VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 10 -->
+            <div class="pelicula">
+                <img src="fr.jpg" alt="Frozen">
+                <h2>FROZEN</h2>
+                <p><b>Género:</b> Animación</p>
+                <p><b>Duración:</b> 1h 42min</p>
+                <p><b>Clasificación:</b> A</p>
+                <p><b>Sala:</b> 10</p>
+                <div class="descripcion">Anna busca a Elsa para terminar con el invierno eterno.</div>
+                <a class="boton-trailer" href="https://youtu.be/QTvcYow0Z5U">VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 11 -->
+            <div class="pelicula">
+                <img src="sp.jpg" alt="Spider-Man">
+                <h2>SPIDER-MAN</h2>
+                <p><b>Género:</b> Acción</p>
+                <p><b>Duración:</b> 2h 1min</p>
+                <p><b>Clasificación:</b> B</p>
+                <p><b>Sala:</b> 11</p>
+                <div class="descripcion">Peter Parker descubre sus poderes de héroe.</div>
+                <a class="boton-trailer" href="https://youtu.be/QXibcL7-XbU?si=20gn3ewFFqzfmRAM">VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 12 -->
+            <div class="pelicula">
+                <img src="av.jpg" alt="Los Vengadores">
+                <h2>LOS VENGADORES</h2>
+                <p><b>Género:</b> Acción</p>
+                <p><b>Duración:</b> 2h 23min</p>
+                <p><b>Clasificación:</b> B</p>
+                <p><b>Sala:</b> 12</p>
+                <div class="descripcion">Superhéroes se unen para proteger al planeta.</div>
+                <a class="boton-trailer"
+           href="https://youtu.be/u7QErIFCc7k?si=2CcPs86LibRj6eli">
+          VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 13 -->
+            <div class="pelicula">
+                <img src="ga.jpg" alt="Harry Potter">
+                <h2>HARRY POTTER</h2>
+                <p><b>Género:</b> Fantasía</p>
+                <p><b>Duración:</b> 2h 32min</p>
+                <p><b>Clasificación:</b> A</p>
+                <p><b>Sala:</b> 13</p>
+                <div class="descripcion">Harry descubre que es un mago y entra a Hogwarts.</div>
+                <a class="boton-trailer"
+          href="https://youtu.be/JZDk-Y8FxCA?si=2k0aLE8I8QuDnt0x">VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 14 -->
+            <div class="pelicula">
+                <img src="ba.jpg" alt="Barbie">
+                <h2>BARBIE</h2>
+                <p><b>Género:</b> Comedia</p>
+                <p><b>Duración:</b> 1h 54min</p>
+                <p><b>Clasificación:</b> B</p>
+                <p><b>Sala:</b> 14</p>
+                <div class="descripcion">Barbie viaja al mundo real para conocerse a sí misma.</div>
+                <a class="boton-trailer"
+               href="https://youtu.be/zh4KhVSMwtQ">
+              VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 15 -->
+            <div class="pelicula">
+                <img src="wo.jpg" alt="Wonka">
+                <h2>WONKA</h2>
+                <p><b>Género:</b> Fantasía</p>
+                <p><b>Duración:</b> 1h 56min</p>
+                <p><b>Clasificación:</b> A</p>
+                <p><b>Sala:</b> 15</p>
+                <div class="descripcion">Un chocolatero busca cumplir su sueño de crear chocolates.</div>
+                <a class="boton-trailer" 
+              href="https://youtu.be/-YRw-3dgsjo?si=_AhdBtScbQbfa8dz">
+                VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 16 -->
+            <div class="pelicula">
+                <img src="ey.jpeg" alt="El Rey León">
+                <h2>EL REY LEON</h2>
+                <p><b>Género:</b> Animación</p>
+                <p><b>Duración:</b> 1h 28min</p>
+                <p><b>Clasificación:</b> A</p>
+                <p><b>Sala:</b> 16</p>
+                <div class="descripcion">Simba regresa a recuperar su lugar como rey.</div>
+                <a class="boton-trailer" 
+            href="https://youtu.be/bjJvvrKl83M">
+           VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 17 -->
+            <div class="pelicula">
+                <img src="mo.jpeg" alt="Moana">
+                <h2>MOANA</h2>
+                <p><b>Género:</b> Animación</p>
+                <p><b>Duración:</b> 1h 47min</p>
+                <p><b>Clasificación:</b> A</p>
+                <p><b>Sala:</b> 17</p>
+                <div class="descripcion">Moana navega por el océano para salvar a su pueblo.</div>
+                <a class="boton-trailer"
+                href="https://www.disneylatino.com/video/moana-2-trailer-oficial-subtitulado-2">
+                VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 18 -->
+            <div class="pelicula">
+                <img src="nm.jpg" alt="Buscando A Nemo">
+                <h2>BUSCANDO A NEMO</h2>
+                <p><b>Género:</b> Animación</p>
+                <p><b>Duración:</b> 1h 40min</p>
+                <p><b>Clasificación:</b> A</p>
+                <p><b>Sala:</b> 18</p>
+                <div class="descripcion">Marlin recorre el océano para encontrar a Nemo.</div>
+                <a class="boton-trailer" href="#">VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 19 -->
+            <div class="pelicula">
+                <img src="kf.jpg" alt="Kung Fu Panda">
+                <h2>KUNG FU PANDA</h2>
+                <p><b>Género:</b> Animación</p>
+                <p><b>Duración:</b> 1h 32min</p>
+                <p><b>Clasificación:</b> A</p>
+                <p><b>Sala:</b> 19</p>
+                <div class="descripcion">Po descubre que puede convertirse en un guerrero dragón.</div>
+                <a class="boton-trailer" href="https://youtu.be/vRhMIpFu-Zw">VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 20 -->
+            <div class="pelicula">
+                <img src="sh.jpg" alt="Shrek">
+                <h2>SHREK</h2>
+                <p><b>Género:</b> Animación</p>
+                <p><b>Duración:</b> 1h 30min</p>
+                <p><b>Clasificación:</b> A</p>
+                <p><b>Sala:</b> 20</p>
+                <div class="descripcion">Un ogro rescata a una princesa para recuperar su pantano.</div>
+                <a class="boton-trailer" 
+               href="https://youtu.be/CFeRaV32Zuo">
+             VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 21 -->
+            <div class="pelicula">
+                <img src="vll.jpg" alt="Mi Villano Favorito">
+                <h2>MI VILLANO FAVORITO</h2>
+                <p><b>Género:</b> Animación</p>
+                <p><b>Duración:</b> 1h 35min</p>
+                <p><b>Clasificación:</b> A</p>
+                <p><b>Sala:</b> 21</p>
+                <div class="descripcion">Gru conoce a tres niñas que cambian su vida.</div>
+                <a class="boton-trailer"
+               href="https://youtu.be/B7S4KodYFCM">  
+              VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 22 -->
+            <div class="pelicula">
+                <img src="sc.jpg" alt="Sonic">
+                <h2>SONIC</h2>
+                <p><b>Género:</b> Aventura</p>
+                <p><b>Duración:</b> 1h 39min</p>
+                <p><b>Clasificación:</b> A</p>
+                <p><b>Sala:</b> 22</p>
+                <div class="descripcion">Sonic enfrenta al Dr. Robotnik con sus amigos.</div>
+                <a class="boton-trailer"
+                href="https://youtu.be/MsaAnA2EZQg?si=0YPX0Zhs16C-i4Hb"> 
+               VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 23 -->
+            <div class="pelicula">
+                <img src="ju.jpg" alt="Jumanji">
+                <h2>JUMANJI</h2>
+                <p><b>Género:</b> Aventura</p>
+                <p><b>Duración:</b> 1h 44min</p>
+                <p><b>Clasificación:</b> B</p>
+                <p><b>Sala:</b> 23</p>
+                <div class="descripcion">Jóvenes quedan atrapados en un videojuego mágico.</div>
+                <a class="boton-trailer"
+            href="https://youtu.be/rDzfxcpc6fw?si=R5ZcR-_RK7ro-S7l">
+           VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 24 -->
+            <div class="pelicula">
+                <img src="do.jpg" alt="Doctor Strange">
+                <h2>DOCTOR STRANGE</h2>
+                <p><b>Género:</b> Acción</p>
+                <p><b>Duración:</b> 1h 55min</p>
+                <p><b>Clasificación:</b> B</p>
+                <p><b>Sala:</b> 24</p>
+                <div class="descripcion">Un cirujano descubre las artes místicas.</div>
+                <a class="boton-trailer"
+              href="https://youtu.be/DYyMsYgZDJM?si=I8A7-NkHtd3uYQ-e"> 
+             VER TRÁILER</a>
+            </div>
+
+            <!-- PELÍCULA 25 -->
+            <div class="pelicula">
+                <img src="o.jpg" alt="El Gato Con Botas">
+                <h2>EL GATO CON BOTAS</h2>
+                <p><b>Género:</b> Animación</p>
+                <p><b>Duración:</b> 1h 30min</p>
+                <p><b>Clasificación:</b> A</p>
+                <p><b>Sala:</b> 25</p>
+                <div class="descripcion">Un gato aventurero emprende un viaje para recuperar sus vidas.</div>
+                <a class="boton-trailer" 
+               href="https://youtu.be/18v5EPO5ySs"> 
+              VER TRÁILER</a>
+            </div>
+        </div>
+
+        <!-- HORARIOS -->
+        <div class="titulo">
+            <h2>HORARIOS</h2>
+        </div>
+
+        <table>
+            <tr>
+                <th>Horario</th>
+                <th>A dos metros de ti</th>
+                <th>Bajo la misma estrella</th>
+                <th>Jurassic World</th>
+                <th>Mario Bros</th>
+                <th>Amor a medianoche</th>
+            </tr>
+            <tr>
+                <td>12:00 PM</td>
+                <td>12:00</td>
+                <td>12:15</td>
+                <td>12:30</td>
+                <td>12:45</td>
+                <td>1:00</td>
+            </tr>
+            <tr>
+                <td>3:00 PM</td>
+                <td>3:00</td>
+                <td>3:15</td>
+                <td>3:30</td>
+                <td>3:45</td>
+                <td>4:00</td>
+            </tr>
+            <tr>
+                <td>6:00 PM</td>
+                <td>6:00</td>
+                <td>6:15</td>
+                <td>6:30</td>
+                <td>6:45</td>
+                <td>7:00</td>
+            </tr>
+            <tr>
+                <td>9:00 PM</td>
+                <td>9:00</td>
+                <td>9:15</td>
+                <td>9:30</td>
+                <td>9:45</td>
+                <td>10:00</td>
+            </tr>
+        </table>
+
+        <!-- BOTON PARA IR A COMPRAR -->
+        <button id="btn-ir-compras" class="boton-comprar"> COMPRAR BOLETOS Y PROMOCIONES </button>
+    </div>
+
+     
+    <div id="seccion-compras">
+
+        <!-- TABLA 1: PRECIOS REGULARES -->
+        <div class="titulo">
+            <h2> PRECIOS DE BOLETOS</h2>
+        </div>
+        <table>
+            <tr>
+                <th>Tipo de Boleto</th>
+                <th>Precio Regular</th>
+            </tr>
+            <tr>
+                <td>Adulto</td>
+                <td>$80</td>
+            </tr>
+            <tr>
+                <td>Niño</td>
+                <td>$60</td>
+            </tr>
+            <tr>
+                <td>Estudiante</td>
+                <td>$65</td>
+            </tr>
+            <tr>
+                <td>Adulto mayor</td>
+                <td>$60</td>
+            </tr>
+        </table>
+
+        <!-- TABLA 2: PROMOCIONES -->
+        <div class="titulo">
+            <h2> PROMOCIONES DE LA SEMANA</h2>
+        </div>
+        <table>
+            <tr>
+                <th>Día / Condición</th>
+                <th>Promoción</th>
+            </tr>
+            <tr>
+                <td>Martes</td>
+                <td>25% de descuento en todas las películas</td>
+            </tr>
+            <tr>
+                <td>Jueves</td>
+                <td>2x1 en boletos de Niños</td>
+            </tr>
+            <tr>
+                <td>Sábado</td>
+                <td>10% de descuento en todos los combos de comida</td>
+            </tr>
+            <tr>
+                <td>Lunes a Viernes</td>
+                <td>20% de descuento para Estudiantes</td>
+            </tr>
+        </table>
+
+        <!-- TABLA 3: PAGO DE BOLETOS -->
+        <div class="titulo">
+            <h2> PAGAR BOLETOS</h2>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Película</th>
+                    <th>Tipo de Boleto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unidad</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <select id="sel-pelicula">
+                            <option value="A dos metros de ti">A dos metros de ti</option>
+                            <option value="Bajo la misma estrella">Bajo la misma estrella</option>
+                            <option value="Jurassic World">Jurassic World</option>
+                            <option value="Super Mario Bros">Super Mario Bros</option>
+                            <option value="Amor a medianoche">Amor a medianoche</option>
+                            <option value="Avatar">Avatar</option>
+                            <option value="Titanic">Titanic</option>
+                            <option value="Intensamente 2">Intensamente 2</option>
+                            <option value="Coco">Coco</option>
+                            <option value="Frozen">Frozen</option>
+                            <option value="Spider-Man">Spider-Man</option>
+                            <option value="Los Vengadores">Los Vengadores</option>
+                            <option value="Harry Potter">Harry Potter</option>
+                            <option value="Barbie">Barbie</option>
+                            <option value="Wonka">Wonka</option>
+                            <option value="El Rey León">El Rey León</option>
+                            <option value="Moana">Moana</option>
+                            <option value="Buscando a Nemo">Buscando a Nemo</option>
+                            <option value="Kung Fu Panda">Kung Fu Panda</option>
+                            <option value="Shrek">Shrek</option>
+                            <option value="Mi Villano Favorito">Mi Villano Favorito</option>
+                            <option value="Sonic">Sonic</option>
+                            <option value="Jumanji">Jumanji</option>
+                            <option value="Doctor Strange">Doctor Strange</option>
+                            <option value="El Gato con Botas">El Gato con Botas</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="sel-tipo-boleto">
+                            <option value="Adulto">Adulto</option>
+                            <option value="Niño">Niño</option>
+                            <option value="Estudiante">Estudiante</option>
+                            <option value="Adulto mayor">Adulto mayor</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="number" id="cant-boletos" value="1" min="1" max="10">
+                    </td>
+                    <td id="txt-precio-unitario">$0</td>
+                    <td id="txt-subtotal-boletos">$0</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- TABLA 4: COMPRAR PROMOCIONES DE COMIDA -->
+        <div class="titulo">
+            <h2> COMPRAR PROMOCIONES DE COMIDA</h2>
+        </div>
+        <table id="tabla-comida">
+            <thead>
+                <tr>
+                    <th>Combo / Promoción</th>
+                    <th>Incluye</th>
+                    <th>Precio Regular</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Combo Pareja</b></td>
+                    <td>1 Palomitas Grandes + 2 Refrescos Grandes + 1 Hot Dog</td>
+                    <td>$160</td>
+                    <td><input type="number" class="cant-comida" data-precio="160" value="0" min="0"></td>
+                    <td class="subtotal-comida">$0</td>
+                </tr>
+                <tr>
+                    <td><b>Combo Familiar</b></td>
+                    <td>2 Palomitas Grandes + 4 Refrescos Medianos + 2 Nachos</td>
+                    <td>$280</td>
+                    <td><input type="number" class="cant-comida" data-precio="280" value="0" min="0"></td>
+                    <td class="subtotal-comida">$0</td>
+                </tr>
+                <tr>
+                    <td><b>Paquete Nachos</b></td>
+                    <td>1 Nachos con Queso + 1 Refresco Grande</td>
+                    <td>$95</td>
+                    <td><input type="number" class="cant-comida" data-precio="95" value="0" min="0"></td>
+                    <td class="subtotal-comida">$0</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- TOTAL GENERAL -->
+        <div class="resumen-total">
+            
+            TOTAL A PAGAR: <span id="txt-total-pagar" style="color:#8E5BA0;">$0 MXN</span>
+        </div>
+
+        <button id="btn-volver-cartelera" class="boton-comprar" style="background-color: #A06AAD;">👈 VOLVER A LA CARTELERA</button>
+    </div>
+
+    <!-- ARCHIVO JS -->
+    <script src="script.js"></script>
+</body>
+</html>
